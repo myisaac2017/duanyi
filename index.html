@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"; />
+    <title></title>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。" 			
+   		});
+
+   		function showname(xingming){
+   			var biyezhao=document.getElementById("byz");
+   			var x=event.clientX;
+   			var y=event.clientY;
+   			var name=document.getElementById("name2");
+   			if (xingming=='yincang'){ 
+   				name.innerHTML="";
+   				return;	
+   			};
+   			name.innerHTML=xingming;
+   			
+   			//name.style.left=x;
+   			//name.style.top=y;
+   			name.style.backgroundColor="yellow";
+   		}
+   		function show_coords(event){
+   			/*var x=event.pageX;
+   			var y=event.pageY;  
+   			var say=document.all("coords");
+   			say.innerHTML="x:"+x+' '+"y:"+y;
+   			say.style.left=x+30;
+   			say.style.top=y;
+   			say.style.backgroundColor="yellow";*/
+   		}
+   		
+   		function getzhuobiao(event){
+   			/*var biyezhao=document.getElementById("byz");
+   			var txt=document.getElementById("zhuobiao");
+   			var x=event.clientX-biyezhao.offsetLeft;
+   			var y=event.clientY-biyezhao.offsetTop; 
+   			if (txt.value==""){
+   				txt.value=x+','+y;
+   			}
+   				else
+   			{	
+   				txt.value=txt.value+','+x+','+y;
+   			}*/
+   		}
+    </script>
+<style type="text/css">
+	#c2005zq {width: 100%; height: 100%;}
+	#name2 {position: fixed;font-size: 25px;border: 1px solid royalblue;top: 200px;left: 20px;}
+</style>    
+</head>
+<body onmousemove="show_coords(event)" onclick="getzhuobiao(event)">
+	<div>
+		<p id="coords"></p>
+		<p style="position: absolute;background-color:darkturquoise;top: 140px;">点击或者鼠标移动到头像上现实姓名,姓名有不对或需要补充的在微信群里面说一下，毕竟有的名字记不清楚了</p>
+		<p id="name2"></p>
+		<img id="byz" src="img/c2005zq.jpeg" width="1243" height="877" alt="Planets" usemap="#planetmap">
+		<map name="planetmap">
+  			<area  coords="119,588,164,635"  onmousemove="showname('程航')" onmouseout="showname('yincang')" >
+  			<area  coords="227,578,271,624"  onmousemove="showname('徐瑶')" onmouseout="showname('yincang')" >
+  			<area  coords="326,579,363,620"  onmousemove="showname('贺丹')" onmouseout="showname('yincang')" >
+  			<area  coords="409,586,450,626"  onmousemove="showname('李玲')" onmouseout="showname('yincang')" >
+  			<area  coords="504,557,543,602"  onmousemove="showname('王慧')" onmouseout="showname('yincang')" >
+  			<area  coords="581,585,620,628"  onmousemove="showname('刘双')" onmouseout="showname('yincang')" >
+  			<area  coords="664,574,706,630"  onmousemove="showname('陈玉')" onmouseout="showname('yincang')" >
+  			<area  coords="762,575,802,624"  onmousemove="showname('唐蕊')" onmouseout="showname('yincang')" >
+  			<area  coords="830,566,876,612"  onmousemove="showname('陈珊')" onmouseout="showname('yincang')" >
+  			<area  coords="889,570,940,624"  onmousemove="showname('王秘')" onmouseout="showname('yincang')" >
+  			<area  coords="967,568,1020,615"  onmousemove="showname('贺珊')" onmouseout="showname('yincang')" >
+  			<area  coords="1073,575,1123,626"  onmousemove="showname('王莉君')" onmouseout="showname('yincang')" >
+
+			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >  			
+  			<area  coords="250,527,292,566"  onmousemove="showname('化学老师:旺秀云')" onmouseout="showname('yincang')" >
+  			<area  coords="338,522,375,561"  onmousemove="showname('班主任(英语老师):张晓')" onmouseout="showname('yincang')" >
+  			<area  coords="402,521,442,558"  onmousemove="showname('主任:李天建')" onmouseout="showname('yincang')" >
+  			<area  coords="492,505,536,547"  onmousemove="showname('副校长(政治):刘')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords="685,496,725,538"  onmousemove="showname('林吉平')" onmouseout="showname('yincang')" >
+  			<area  coords="761,513,808,551"  onmousemove="showname('历史老师:张凤')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords="958,488,993,535"  onmousemove="showname('数学老师:刘云松')" onmouseout="showname('yincang')" >
+  			
+  			<area  coords="248,477,283,515"  onmousemove="showname('陈学森')" onmouseout="showname('yincang')" >
+  			<area  coords="304,481,337,512"  onmousemove="showname('向开浪')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords="496,458,527,495"  onmousemove="showname('王满')" onmouseout="showname('yincang')" >
+  			<area  coords="574,458,606,493"  onmousemove="showname('陈国琪')" onmouseout="showname('yincang')" >
+  			<area  coords="642,457,680,496"  onmousemove="showname('李玉婷')" onmouseout="showname('yincang')" >
+  			<area  coords="737,465,769,499"  onmousemove="showname('潘敏')" onmouseout="showname('yincang')" >
+  			<area  coords="817,460,851,497"  onmousemove="showname('樊静')" onmouseout="showname('yincang')" >
+  			<area  coords="915,458,949,492"  onmousemove="showname('龚小杰')" onmouseout="showname('yincang')" >
+  			<area  coords="1010,466,1040,503"  onmousemove="showname('严娟')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords="278,444,309,476"  onmousemove="showname('唐娇')" onmouseout="showname('yincang')" >
+  			<area  coords="350,438,384,473"  onmousemove="showname('黄国亮')" onmouseout="showname('yincang')" >
+  			<area  coords="445,478,420,439"  onmousemove="showname('李强')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords="530,429,563,466"  onmousemove="showname('段毅')" onmouseout="showname('yincang')" >
+  			<area  coords="596,426,631,461"  onmousemove="showname('陈港')" onmouseout="showname('yincang')" >
+  			<area  coords="650,418,683,454"  onmousemove="showname('张乐')" onmouseout="showname('yincang')" >
+  			<area  coords="715,428,747,460"  onmousemove="showname('祝源')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords="890,416,925,453"  onmousemove="showname('段威')" onmouseout="showname('yincang')" >
+  			<area  coords="958,416,992,451"  onmousemove="showname('唐明星')" onmouseout="showname('yincang')" >
+  			<area  coords="1074,402,1107,445"  onmousemove="showname('黄旭')" onmouseout="showname('yincang')" >
+  			
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords="313,389,350,421"  onmousemove="showname('杜建')" onmouseout="showname('yincang')" >
+  			<area  coords="363,396,393,431"  onmousemove="showname('姜华')" onmouseout="showname('yincang')" >
+  			<area  coords="427,384,457,417"  onmousemove="showname('韩睿')" onmouseout="showname('yincang')" >
+  			<area  coords="482,380,516,418"  onmousemove="showname('王伟')" onmouseout="showname('yincang')" >
+  			<area  coords="533,367,569,404"  onmousemove="showname('班长:杨鸿')" onmouseout="showname('yincang')" >
+  			<area  coords="585,390,620,420"  onmousemove="showname('叶池')" onmouseout="showname('yincang')" >
+  			<area  coords="646,382,683,416"  onmousemove="showname('袁建')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords=""  onmousemove="showname('')" onmouseout="showname('yincang')" >
+  			<area  coords="831,364,863,398"  onmousemove="showname('宋流东')" onmouseout="showname('yincang')" >
+  			<area  coords="893,363,929,398"  onmousemove="showname('杨海')" onmouseout="showname('yincang')" >
+  			<area  coords="964,361,1002,397"  onmousemove="showname('刘良久')" onmouseout="showname('yincang')" >
+  			<area  coords="1049,364,1086,397"  onmousemove="showname('张思进')" onmouseout="showname('yincang')" >			
+		</map> 
+		<!--
+       <input type="text" id="zhuobiao" /> 
+       -->
+	</div>
+</body>
+</html>
